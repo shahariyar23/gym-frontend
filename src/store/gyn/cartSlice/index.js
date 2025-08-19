@@ -9,7 +9,7 @@ const initialState = {
 export const addToCart = createAsyncThunk(
   "/cart/addToCart",
   async ({ userId, accessoriesId, quantity }) => {
-    const res = await axios.post("http://localhost:5000/api/gym/cart/add", {
+    const res = await axios.post("https://gym-backend-zeta.vercel.app/api/gym/cart/add", {
       userId,
       accessoriesId,
       quantity,
@@ -23,7 +23,7 @@ export const fetchToCartAccessories = createAsyncThunk(
   "/cart/fetchAccessories",
   async ({ userId }) => {
     const res = await axios.get(
-      `http://localhost:5000/api/gym/cart/fetchAccessories/${userId}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/cart/fetchAccessories/${userId}`,
       {}
     );
     return res?.data;
@@ -32,7 +32,7 @@ export const fetchToCartAccessories = createAsyncThunk(
 export const updateToCart = createAsyncThunk(
   "/cart/updateToCart",
   async ({ userId, accessoriesId, quantity }) => {
-    const res = await axios.put("http://localhost:5000/api/gym/cart/update", {
+    const res = await axios.put("https://gym-backend-zeta.vercel.app/api/gym/cart/update", {
       userId,
       accessoriesId,
       quantity,
@@ -45,7 +45,7 @@ export const deleteToCart = createAsyncThunk(
   async ({ userId, accessoriesId }) => {
     console.log(userId, accessoriesId);
     const res = await axios.delete(
-      `http://localhost:5000/api/gym/cart/delete/${userId}/${accessoriesId}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/cart/delete/${userId}/${accessoriesId}`,
       {}
     );
     console.log(res?.data);

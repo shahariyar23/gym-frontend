@@ -17,7 +17,7 @@ export const fetchFilterCourse = createAsyncThunk(
       sortBy: sortParams,
     });
     const res = await axios.get(
-      `http://localhost:5000/api/gym/course/get?${query}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/course/get?${query}`,
       {
         withCredentials: true,
       }
@@ -29,7 +29,7 @@ export const fetchHomeCourse = createAsyncThunk(
   "/couser/fetchHomeCourse",
   async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/gym/course/fetch-home",
+      "https://gym-backend-zeta.vercel.app/api/gym/course/fetch-home",
       {
         withCredentials: true,
       }
@@ -41,7 +41,7 @@ export const fetchCourseDetails = createAsyncThunk(
   "/couser/fetchCourseDetails",
   async (id) => {
     const res = await axios.get(
-      `http://localhost:5000/api/gym/course/get/${id}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/course/get/${id}`,
       {
         withCredentials: true,
       }

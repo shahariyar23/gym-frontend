@@ -10,7 +10,7 @@ export const createCoures = createAsyncThunk(
   "/couser/createCourse",
   async (fromData) => {
     const res = await axios.post(
-      "http://localhost:5000/api/admin/course/create",
+      "https://gym-backend-zeta.vercel.app/api/admin/course/create",
       fromData,
       {
         withCredentials: true,
@@ -23,7 +23,7 @@ export const fetchAllCourse = createAsyncThunk(
   "/couser/fetchAllCours",
   async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/admin/course/get",
+      "https://gym-backend-zeta.vercel.app/api/admin/course/get",
       {},
       {
         withCredentials: true,
@@ -37,7 +37,7 @@ export const updateCourse = createAsyncThunk(
   async ({ id, fromData }) => {
     console.log(id, fromData);
     const res = await axios.put(
-      `http://localhost:5000/api/admin/course/update/${id}`,
+      `https://gym-backend-zeta.vercel.app/api/admin/course/update/${id}`,
       fromData,
       {
         withCredentials: true,
@@ -50,7 +50,7 @@ export const deleteCourse = createAsyncThunk(
   "/couser/deleteCourse",
   async (id) => {
     const res = await axios.delete(
-      `http://localhost:5000/api/admin/course/delete/${id}`,
+      `https://gym-backend-zeta.vercel.app/api/admin/course/delete/${id}`,
       {},
       {
         withCredentials: true,

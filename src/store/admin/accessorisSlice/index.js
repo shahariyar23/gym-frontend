@@ -10,7 +10,7 @@ export const createAccessories = createAsyncThunk(
   "/accessories/createAccessories",
   async (fromData) => {
     const res = await axios.post(
-      "http://localhost:5000/api/admin/accessories/create",
+      "https://gym-backend-zeta.vercel.app/api/admin/accessories/create",
       fromData,
       {
         withCredentials: true,
@@ -24,7 +24,7 @@ export const fetchAllAccessories = createAsyncThunk(
   "/accessories/fetchAllAccessories",
   async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/admin/accessories/get",
+      "https://gym-backend-zeta.vercel.app/api/admin/accessories/get",
       {},
       {
         withCredentials: true,
@@ -39,7 +39,7 @@ export const updateAccessories = createAsyncThunk(
   async ({ id, fromData }) => {
     console.log(id, fromData);
     const res = await axios.put(
-      `http://localhost:5000/api/admin/accessories/update/${id}`,
+      `https://gym-backend-zeta.vercel.app/api/admin/accessories/update/${id}`,
       fromData,
       {
         withCredentials: true,
@@ -53,7 +53,7 @@ export const deleteAccessories = createAsyncThunk(
   "/couser/deleteAccessories",
   async (id) => {
     const res = await axios.delete(
-      `http://localhost:5000/api/admin/accessories/delete/${id}`,
+      `https://gym-backend-zeta.vercel.app/api/admin/accessories/delete/${id}`,
       {},
       {
         withCredentials: true,

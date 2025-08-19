@@ -10,7 +10,7 @@ export const addAddress = createAsyncThunk(
   "/address/addAddress",
   async (fromData) => {
     const response = await axios.post(
-      "http://localhost:5000/api/gym/address/add",
+      "https://gym-backend-zeta.vercel.app/api/gym/address/add",
       fromData
     );
 
@@ -21,7 +21,7 @@ export const fetchAddress = createAsyncThunk(
   "/address/fetchAddress",
   async (userId) => {
     const response = await axios.get(
-      `http://localhost:5000/api/gym/address/fetch/${userId}`
+      `https://gym-backend-zeta.vercel.app/api/gym/address/fetch/${userId}`
     );
 
     return response.data;
@@ -31,7 +31,7 @@ export const updateAddress = createAsyncThunk(
   "/address/updateAddress",
   async ({ fromData, userId, addressId }) => {
     const response = await axios.put(
-      `http://localhost:5000/api/gym/address/update/${userId}/${addressId}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/address/update/${userId}/${addressId}`,
       fromData
     );
 
@@ -42,7 +42,7 @@ export const deleteAddress = createAsyncThunk(
   "/address/deleteAddress",
   async ({ userId, addressId }) => {
     const response = await axios.delete(
-      `http://localhost:5000/api/gym/address/delete/${userId}/${addressId}`
+      `https://gym-backend-zeta.vercel.app/api/gym/address/delete/${userId}/${addressId}`
     );
 
     return response.data;

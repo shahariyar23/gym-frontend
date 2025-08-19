@@ -56,7 +56,7 @@ const AdminGymCourse = () => {
     const data = new FormData();
     data.append("course", imagefile);
     const res = await axios
-      .post("http://localhost:5000/api/admin/course/upload", data)
+      .post("https://gym-backend-zeta.vercel.app/api/admin/course/upload", data)
       .then((res) => {
         if (res?.data.success) {
           // console.log(res.data.result.url);

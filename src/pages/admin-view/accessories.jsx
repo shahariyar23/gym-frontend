@@ -67,7 +67,7 @@ const AdminAccessories = () => {
     data.append("accessories", imagefile);
     console.log(data);
     const res = await axios
-      .post("http://localhost:5000/api/admin/accessories/upload", data)
+      .post("https://gym-backend-zeta.vercel.app/api/admin/accessories/upload", data)
       .then((res) => {
         if (res?.data.success) {
           // console.log(res.data.result.url);

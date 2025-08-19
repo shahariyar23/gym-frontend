@@ -18,7 +18,7 @@ export const fetchFilterAccessories = createAsyncThunk(
       sortBy: sortParams,
     });
     const res = await axios.get(
-      `http://localhost:5000/api/gym/accessories/get?${query}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/accessories/get?${query}`,
       {
         withCredentials: true,
       }
@@ -30,7 +30,7 @@ export const fetchHomeAccessories = createAsyncThunk(
   "/couser/fetchHomeAccessories",
   async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/gym/accessories/fetch-home",
+      "https://gym-backend-zeta.vercel.app/api/gym/accessories/fetch-home",
       {
         withCredentials: true,
       }
@@ -42,7 +42,7 @@ export const fetchAccessoriesDetails = createAsyncThunk(
   "/couser/fetchAccessoriesDetails",
   async (id) => {
     const res = await axios.get(
-      `http://localhost:5000/api/gym/accessories/getDetails/${id}`,
+      `https://gym-backend-zeta.vercel.app/api/gym/accessories/getDetails/${id}`,
       {
         withCredentials: true,
       }

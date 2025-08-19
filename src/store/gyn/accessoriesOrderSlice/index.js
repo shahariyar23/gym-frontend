@@ -12,7 +12,7 @@ export const createAccessoriesOrder = createAsyncThunk(
   "/order/payment",
   async (orderData) => {
     const response = await axios.post(
-      "http://localhost:5000/api/gym/accessories/order/payment",
+      "https://gym-backend-zeta.vercel.app/api/gym/accessories/order/payment",
       orderData
     );
     return response.data;
@@ -23,7 +23,7 @@ export const captureAccessoriesOrder = createAsyncThunk(
   async ({ orderId }) => {
     console.log(orderId, "orderID");
     const res = await axios.post(
-      "http://localhost:5000/api/gym/accessories/order/captureOrder",
+      "https://gym-backend-zeta.vercel.app/api/gym/accessories/order/captureOrder",
       { orderId }
     );
     console.log(res.data);
@@ -35,7 +35,7 @@ export const getAllAccessoriesOrdersByUserId = createAsyncThunk(
   "/order/getAllOrdersByUserId",
   async (userId) => {
     const response = await axios.get(
-      `http://localhost:5000/api/gym/accessories/order/list/${userId}`
+      `https://gym-backend-zeta.vercel.app/api/gym/accessories/order/list/${userId}`
     );
 
     return response.data;
@@ -46,7 +46,7 @@ export const getAccessoriesOrderDetails = createAsyncThunk(
   "/order/getOrderDetails",
   async (id) => {
     const response = await axios.get(
-      `http://localhost:5000/api/gym/accessories/order/details/${id}`
+      `https://gym-backend-zeta.vercel.app/api/gym/accessories/order/details/${id}`
     );
 
     return response.data;

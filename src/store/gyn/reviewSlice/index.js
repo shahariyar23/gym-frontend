@@ -10,7 +10,7 @@ export const addReview = createAsyncThunk(
   "review/addReview",
   async ({ productId, userId, userName, reviewMessage, reviewValue }) => {
     const response = await axios.post(
-      "http://localhost:5000/api/gym/review/add",
+      "https://gym-backend-zeta.vercel.app/api/gym/review/add",
       { productId, userId, userName, reviewMessage, reviewValue }
     );
     return response.data;
@@ -21,7 +21,7 @@ export const getReview = createAsyncThunk(
   "review/getReview",
   async (productId) => {
     const res = await axios.get(
-      `http://localhost:5000/api/gym/review/review/${productId}`
+      `https://gym-backend-zeta.vercel.app/api/gym/review/review/${productId}`
     );
     return res.data;
   }

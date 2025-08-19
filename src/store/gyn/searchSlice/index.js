@@ -9,7 +9,7 @@ const initialState = {
 export const getSearcResults = createAsyncThunk(
   "api/search",
   async (keyword) => {
-    const res = await axios.get(`http://localhost:5000/api/search/${keyword}`);
+    const res = await axios.get(`https://gym-backend-zeta.vercel.app/api/search/${keyword}`);
     return res.data;
   }
 );
