@@ -18,7 +18,7 @@ import { useEffect } from "react";
 import { checkAuth } from "./store/auth-slice";
 import AdminGymCourse from "./pages/admin-view/gym";
 import PaymentFail from "./pages/gymer-view/paymentFail";
-import PaymentCancel from "./pages/gymer-view/PaymentCancel";
+import PaymentCancel from "./pages/gymer-view/PaymentCancel.jsx";
 import OrderSuccess from "./pages/gymer-view/orderSuccess";
 import SearchResult from "./pages/gymer-view/search";
 import Accessories from "./pages/gymer-view/accessories";
